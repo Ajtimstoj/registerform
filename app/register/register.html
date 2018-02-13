@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="register/register.css">
+
+<p>Register form</p>
+
+
+
+<div ng-controller="RegisterController">
+    <form novalidate class="css-form">
+        Name: <input type="text" ng-model="user.name" placeholder="Enter a name here" required /><br />
+        Last name: <input type="text" ng-model="user.lastname" required /><br />
+        Address: <input type="text" ng-model="user.address" required /><br />
+        Date of birth: <input type="date" id="date" ng-model="dateString" />
+                        <!--Age: {{birthdate | ageFilter}}--> <br/>
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="register(user)" value="Register" />
+    </form>
+    <pre>user = {{user | json}}</pre>
+    <pre>indexedDB = {{master | json}}</pre>
+
+
+
+
+
+</div>
+
+

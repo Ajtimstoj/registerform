@@ -1,0 +1,34 @@
+<div class="h-100 row align-items-center">
+    <div class="col-md-3" style="background:red">
+
+        <div data-ng-app="indexDBSample" data-ng-controller="Register2Controller as vm">
+
+            <table class="table table-striped">
+                <tr ng-repeat="user in vm.users">
+                    <td>Hello, {{user.lastname}} {{user.name}}!</td>
+                </tr>
+            </table>
+
+
+            <h2>Register form:</h2>
+            <div class="form-group">
+
+                <input type="text" data-ng-model="vm.userName" name="user" placeholder="Name" class="form-control" required/>
+
+                <input type="text" data-ng-model="vm.userLastName" name="user" placeholder="Last name" class="form-control" required/>
+
+                <input type="text" data-ng-model="vm.userAddress" name="user" placeholder="Address" class="form-control" required/>
+
+                Date of birth:<input type="date" data-ng-model="vm.userBirthday" name="user" placeholder="Birthday" class="form-control" required/>
+
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg" data-ng-click="vm.addUser()">Register</button>
+                <button class="btn btn-secondary btn-lg" data-ng-click="vm.refreshList()">Refresh</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
